@@ -27,18 +27,3 @@ La página carga el catálogo al abrirse. El formulario de búsqueda usa `GET`; 
 
 - `GET /api/productos.php?q=texto`: busca por nombre o categoría; `q` puede omitirse para listar todo.
 - `POST /api/productos.php`: recibe `{ "nombre": "...", "categoria": "...", "precio": 123.45, "stock": 2 }` y agrega un producto.
-
-## Publicar en GitHub
-
-Creá un repositorio vacío en tu cuenta de GitHub, luego abrí una terminal en esta carpeta y ejecutá:
-
-```bash
-git init
-git add .
-git commit -m "Implementa buscador seguro con PDO"
-git branch -M main
-git remote add origin https://github.com/TU-USUARIO/TU-REPOSITORIO.git
-git push -u origin main
-```
-
-Reemplazá `TU-USUARIO` y `TU-REPOSITORIO` por los datos del repositorio. Para entregar, compartí la URL de ese repositorio. El backend PHP necesita un servidor PHP/MySQL; GitHub Pages por sí solo no ejecuta PHP.
