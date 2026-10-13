@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo de productos con backend PHP seguro usando PDO y consultas preparadas.">
+    <title>Catálogo de productos | PDO seguro</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main class="pagina">
+        <header class="encabezado">
+            <p class="etiqueta">Demo de backend seguro</p>
+            <h1>Catálogo de productos</h1>
+            <p>Buscá productos y agregá nuevos al catálogo.</p>
+        </header>
+
+        <section class="panel" aria-labelledby="titulo-busqueda">
+            <h2 id="titulo-busqueda">Buscar productos</h2>
+            <form id="form-buscar" class="fila">
+                <label class="solo-lectores" for="input-buscar">Nombre o categoría</label>
+                <input type="search" id="input-buscar" maxlength="100" placeholder="Nombre o categoría">
+                <button type="submit">Buscar</button>
+            </form>
+        </section>
+
+        <section class="panel" aria-labelledby="titulo-alta">
+            <h2 id="titulo-alta">Agregar producto</h2>
+            <form id="form-alta" class="form-alta">
+                <label>Nombre<input name="nombre" required maxlength="100"></label>
+                <label>Categoría<input name="categoria" required maxlength="50"></label>
+                <label>Precio<input name="precio" type="number" min="0" max="99999999.99" step="0.01" required></label>
+                <label>Stock<input name="stock" type="number" min="0" step="1" value="0" required></label>
+                <button type="submit">Guardar producto</button>
+            </form>
+        </section>
+
+        <p id="estado" class="estado" role="status" aria-live="polite"></p>
+        <section id="resultados" class="resultados" aria-label="Resultados de productos"></section>
+    </main>
+    <script src="js/app.js" defer></script>
+</body>
+</html>
